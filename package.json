@@ -1,0 +1,23 @@
+{
+  "name": "chermenin.ru",
+  "version": "0.1.0",
+  "description": "Chermenin's personal blog",
+  "keywords": [
+    "web", "blog"
+  ],
+  "author": "Alex \"Imtec\" Chermenin",
+  "license": "Copyright 2015 Alex Chermenin",
+  "homepage": "http://chermenin.ru",
+  "devDependencies": {
+    "gulp": "^3.7.0",
+    "gulp-marked": "^0.2.0",
+    "gulp-clean": "^0.3.0",
+    "gulp-minify-html": "^0.1.3",
+    "gulp-front-matter": "^1.0.0",
+    "connect": "^2.19.3",
+    "gulp-rename": "^1.2.0",
+    "swig": "^1.3.2",
+    "through2": "^0.5.1",
+    "gulp-util": "^2.2.16"
+  }
+}

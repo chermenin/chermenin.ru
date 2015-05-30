@@ -1,0 +1,45 @@
+{% set page.title = "Моя домашняя страничка" %}
+{% extends 'default.html' %}
+{% block content %}
+	<h1>Пара слов обо мне...</h1>
+	<p>
+		Привет!
+	</p>
+	<img alt="Это я!" title="Это я!" src="./images/me.png" style="float:right;margin-left:25px;"/>
+	<p>
+		Меня зовут Александр Черменин.<br />Родился и вырос в небольшом уральском посёлке Пашия.
+		С детства имел большой интерес к компьютерам и информационным технологиям. Примерно с 9 лет начал писать код,
+		сперва с 8-битной консолью на G-BASIC, со временем, пройдя путь через QuickBasic, Delphi, C#, затронув PHP, C++
+		и даже в кой-то мере Haskell, нашёл своё в языке Java. Уже почти 5 лет пишу предпочтительно на
+		нём, иногда разбавляя порциями Scala.
+	</p>
+	<p>
+		Вообще люблю писать код. Делал это в таких компаниях, как Прогноз и ProIT. Сейчас пишу в пермской компании DartIT.
+		В свободное же время дописываю диплом и посему пока что ничем не увлекаюсь (хотя в небольшие промежутки между дипломом
+		и работой всё же стараюсь писать что-нибудь на Scala). В своё время фотографировал, музицировал... Думаю, время ещё придёт.
+	</p>
+	<p>&nbsp;</p>
+	
+	<h2>Последние записи</h2>
+	<ul>
+		{% for post in site.posts %}
+			{% if loop.index < 4 %}
+				<li class="mini-post">
+					&laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒ 
+					<span class="post-timestamp">{{ post.date|date('d.m.Y') }}</span>
+					<p>{{ post.description|safe }}</p>    
+				</li>
+			{% endif %}      
+		{% endfor %}
+	</ul>
+	
+	<p><span class="rss-icon">&#xe81a;</span> <a href="/atom.xml" type="application/atom+xml">Лента</a>&nbsp;&nbsp;&nbsp;<a href="/archive.html">Все записи...</a></p>
+	<p>Теги: 
+		{% for tag in site.tags %}
+			<a href="/tag/{{ tag }}.html">{{ tag }}</a>
+			<span class="tag-count">({{ site.tagsCount[tag] }})</span>
+			{% if loop.index < site.tags.length %},{% endif %}
+		{% endfor %}
+	</p>
+	
+{% endblock %}
