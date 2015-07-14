@@ -13,4 +13,4 @@ before_script:
   - npm install
   - gulp
 after_success:
-  "cd build; for file in `find`; do curl --ftp-create-dirs -u $FTP_USER:$FTP_PASSWORD -T \"$file\" ftp://ftp.chermenin.ru/; done; cd ..;"
+  "cd build; for file in `find`; do echo \"Upload $file\"; curl --ftp-create-dirs -u $FTP_USER:$FTP_PASSWORD -T \"$file\" \"ftp://ftp.chermenin.ru/$file\"; done; cd ..;"
