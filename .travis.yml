@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - "0.10"
+env:
+  global:
+    - secure: "oEHMQ69Qs5rg0Q1GxQEa0WRJFv5CeiUFg730ZLgY200Zf9VK/b+cSyJRSXAcr7XMy3/M9Yx+b/SSBOU85VXJND+PZczCl1BpFZoHNGZ7cXQTZrZHxQunmLPBUGkTSVEZeemWngOFzaEC5LAThVDEklZlBqo8+yqm4Ir4O0Dx+ku2i110/Ih9w67bQSGRaiUder/Dty2k78T/pCxgIaxLBI+9AgDyv2VQWgSS5vNo7vbQm6lwtCwlfn6z5x9Mx2qZFF7cQs9N0ND0wYiXXZAy3h5idHDrxmr+YbSwmOiNccBVNTQQlR7Kp9xT6UNEz+xFDQgZYsh+2cbEeNbBPkvTBl/ZiaDcG6fMdg21BEoUGlayPXRduVqJgiFtOofDvWpHs5gAjARe8H4i8BuJIQdD8xvRguo4Hsd4dPr2AH9eKTJXnQqjNXIS6s3ZTkJeNhSNmWN9Kpm8HEvD3TC7BdFx46LSxoN7oeCzPw0q0ocyVOf2eTVsDLeAg4DKVCWtLQawiPMziqn5WEdJm/9DFb1JeicQUnKeUeZBYTuoVoxYdBoVxAkymHyvMuFtzOwhEtbLWLg63r7dsId0r5IlGM+B4/DyW37LnJm98nZ1SJ8LtOsjHqMKaR4LR41aJjzhIRr1Q1ki13CJXeKnTq4GYXp1QZRy4snszcvLTU7PyxRB6Hs="
+    - secure: "AMzFt+fN1oLjXRDqddB6/NZICQCubZbNIV9fe6kQ2FLaNpfV9aqsdP/+oAT7mOMKjDr+CQ8eambuAH038BqemvR/kQF47gZRWuixYqD8vh7aVpPEWJ61OBh5j+3VBicD0tbmLoLChaG+04vP3/Uw0qkmFpakaxK50aSXsk7arRF/CqZizmdGO7Ul5TPW4qRPGm7TbEvzFzgaUi1MEgmQwTdlKDq+T/reCEUo75HUE92D1dYcwjlVyBbxHqy4o8yhl6eZIkJgvEC2lKPDzDdAXwImtPkSxuzRwut2g2l4IB25lluddgVp3DAuaA20zGb3vFjpc+uEPwDfmEJc/UqYOK8+MU9uQAibcs6AAV/BXwr4Pl75PDhrhzmSdtzOtLik2ZxMemArftCPqsVn2AjqsS/dZ2sH+IRPvNvXOreHmZNuBuzLGUBN/JbiMzKC2IcEmRKlrAD5dBkcPUnPK1MmW3aBHqGi3Zsoc5V8s8STqBZ5eiJekazBHWTH39IsxrVrPktmzE8tYplAhRgb9+EbGq8y0go5f1Njv+F46XLHYmmG6ZUWSjt7Cmp3InEzWBslCEsVWny0hTrKp/RjadNhEaEilHzL5M96e3hJNpMAMk2PcPBKn/wmW1tKxRbj/ysfZ2IZTV5nquuLqPJglMKoDM/FKBBR+RonyGk0Thc0XCA="
 branches:
   only:
     - master
@@ -8,3 +12,5 @@ before_script:
   - npm install -g gulp
   - npm install
   - gulp
+after_success:
+  "for file in ./build/*; do curl -u $FTP_USER:$FTP_PASSWORD -T \"$file\" ftp://ftp.chermenin.ru/; done;"
