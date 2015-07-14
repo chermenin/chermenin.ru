@@ -19,8 +19,7 @@ layout: default
 -------------------
 
 **Почта**: [alex@chermenin.ru](mailto:alex@chermenin.ru)  
-**Telegram**: @chermenin  
-**ICQ**: 420-829-388  
+**Telegram**: [@chermenin](https://telegram.me/chermenin)  
 **Skype**: imtec_
 
 Прочие полезности
