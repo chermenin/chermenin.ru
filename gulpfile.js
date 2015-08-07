@@ -127,7 +127,7 @@ gulp.task('posts', function () {
 });
 
 gulp.task('pages:html', ['posts'], function () {
-    return gulp.src([src + '/pages/*.html'])
+    return gulp.src([src + '/pages/**/*.html'])
         .pipe(through.obj(function (file, enc, cb) {            
             var data = {
                 site: site,
@@ -142,7 +142,7 @@ gulp.task('pages:html', ['posts'], function () {
 });
 
 gulp.task('pages:md', function () {
-    return gulp.src(src + '/pages/*.md')
+    return gulp.src(src + '/pages/**/*.md')
         .pipe(frontMatter({property: 'page', remove: true}))
         .pipe(marked())
         .pipe(applyTemplate('page.html'))
