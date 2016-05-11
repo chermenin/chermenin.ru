@@ -92,7 +92,7 @@ tags:
                 if (type instanceof StructType) {
                     df.select(
                             Arrays.stream(((StructType) type).fields())
-                                    .map(StructField::name)
+                                    .map(f -> String.format("%s.%s", col, f.name()))
                                     .map(Column::new)
                                     .toArray(Column[]::new)
                     );
