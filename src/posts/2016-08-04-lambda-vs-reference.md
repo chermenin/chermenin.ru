@@ -1,7 +1,7 @@
 ---
 layout: post
 title: x -> x.toString() vs Object::toString
-description: Немного о лямбдах и ссылках на методы.
+description: История о лямбдах и ссылках на методы.
 tags:
     - java
     - кодинг
