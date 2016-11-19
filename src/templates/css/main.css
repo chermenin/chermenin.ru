@@ -124,6 +124,21 @@ ul > li {
 	margin: 15px 0;
 }
 
+img#me {
+	display: none;
+}
+
+@media all and (min-width: 500px) {
+	
+	img#me {
+		display: block;
+	}
+
+	div#navigation {
+		max-height: 50px !important;
+	}
+}
+
 @media all and (min-width: 822px) {
 
 	div#navigation {
