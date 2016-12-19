@@ -1,7 +1,7 @@
 var gulp        = require('gulp');
 var frontMatter = require('gulp-front-matter');
 var marked      = require('gulp-marked');
-var minifyHtml  = require('gulp-minify-html');
+var minifyHtml  = require('gulp-htmlmin');
 var rename      = require('gulp-rename');
 var clean       = require('gulp-clean');
 var gutil       = require('gulp-util');
@@ -80,7 +80,7 @@ function filename2date() {
             var basename = match[4];
             file.page.date = new Date(year, month - 1, day);
 			file.page.date.setHours(file.page.date.getHours() + site.timezoneOffset);
-            file.page.url  = '/' + year + '/' + month + '/' + day + '/' + basename + '.html';
+            file.page.url  = '/' + year + '/' + month + '/' + day + '/' + basename;
         }
         
         this.push(file);
