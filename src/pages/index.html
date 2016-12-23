@@ -12,37 +12,38 @@
 		нём, иногда разбавляя порциями <a target="_blank" href="http://scala-lang.org/">Scala</a>.
 	</p>
 	<p>
-		Вообще люблю писать код. Делал это в таких компаниях, как <a target="_blank" href="http://prognoz.com">Прогноз</a>, 
+		Вообще люблю писать код. Делал это в таких компаниях, как <a target="_blank" href="http://prognoz.com">Прогноз</a>,
 		<a target="_blank" href="http://proitr.ru">ProIT</a>, <a target="_blank" href="http://dartit.ru">DartIT</a> и даже
 		<a target="_blank" href="http://sberbank.ru">СберТех</a>. Сейчас продолжаю своё дело в очень перспективной и новой для меня организации.
 	</p>
+	<p>А ещё я время от времени <a href="http://code.chermenin.ru">пишу код</a> для открытых проектов.</p>
 	<p>
 		Кстати, здесь можно найти информацию о некоторых моих программах (или даже скачать их):
-		<a href="/bmark/ru">Battery Mark</a>, <a href="/files/gstudio/gs2007-1.0.win32.zip">Graf Studio</a>, 
+		<a href="/bmark/ru">Battery Mark</a>, <a href="/files/gstudio/gs2007-1.0.win32.zip">Graf Studio</a>,
 		<a href="/files/rmc/rmc-0.1.en.x86.zip">RMC</a>.
 	</p>
 	<p>&nbsp;</p>
-	
+
 	<h2>Последние записи</h2>
 	<ul>
 		{% for post in site.posts %}
 			{% if loop.index < 4 %}
 				<li class="mini-post">
-					&laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒ 
+					&laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒
 					<span class="post-timestamp">{{ post.date|date('d.m.Y') }}</span>
-					<p>{{ post.description|safe }}</p>    
+					<p>{{ post.description|safe }}</p>
 				</li>
-			{% endif %}      
+			{% endif %}
 		{% endfor %}
 	</ul>
-	
+
 	<p><span class="rss-icon">&#xe81a;</span> <a href="/atom.xml" type="application/atom+xml">Лента</a>&nbsp;&nbsp;&nbsp;<a href="/archive.html">Все записи...</a></p>
-	<p>Теги: 
+	<p>Теги:
 		{% for tag in site.tags %}
 			<a href="/tag/{{ tag }}.html">{{ tag }}</a>
 			<span class="tag-count">({{ site.tagsCount[tag] }})</span>
 			{% if loop.index < site.tags.length %},{% endif %}
 		{% endfor %}
 	</p>
-	
+
 {% endblock %}
