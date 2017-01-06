@@ -124,13 +124,16 @@ ul > li {
 	margin: 15px 0;
 }
 
-img#me {
+div#me {
 	display: none;
+  float: right;
+  margin-left: 25px;
+  margin-bottom: 75px;
 }
 
 @media all and (min-width: 500px) {
-	
-	img#me {
+
+	div#me {
 		display: block;
 	}
 
