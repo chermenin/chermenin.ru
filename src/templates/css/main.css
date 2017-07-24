@@ -124,16 +124,16 @@ ul > li {
 	margin: 15px 0;
 }
 
-div#me {
+div.right-placed {
 	display: none;
   float: right;
   margin-left: 25px;
-  margin-bottom: 75px;
+  margin-bottom: 25px;
 }
 
 @media all and (min-width: 500px) {
 
-	div#me {
+	div.right-placed {
 		display: block;
 	}
 
