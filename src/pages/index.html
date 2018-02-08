@@ -2,10 +2,34 @@
 {% extends 'default.html' %}
 {% block content %}
 	<p>Привет!</p>
-	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 	<div class="right-placed">
 		<p><a href="https://stackexchange.com/users/5132293/alex-chermenin" target="_blank"><img src="https://stackexchange.com/users/flair/5132293.png" width="208" height="58" alt="Profile for Alex Chermenin on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="Profile for Alex Chermenin on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a></p>
-		<div class="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="chermenin"><a class="LI-simple-link" href="https://ru.linkedin.com/in/chermenin?trk=profile-badge" target="_blank">Мой профиль на LinkedIn</a></div>
+
+		<!-- begin LI badge -->
+		<div>
+			<link rel="stylesheet" href="/css/linkedin.css" />
+			<div dir="ltr" class="LI-badge-container-vertical-light LI-badge-container vertical light large" style="display: none">
+				<div class="LI-profile-badge-header LI-name-container">
+					<div class="LI-col">
+						<div class="LI-profile-pic-container" style="background-image: url(/images/linkedin/background.jpg);">
+						  <img src="/images/linkedin/userpic.jpg" class="LI-profile-pic" alt="Alexander Chermenin"></div>
+						</div>
+						<div class="LI-col LI-header">
+							<div class="LI-name">
+								<a href="https://ru.linkedin.com/in/chermenin/en?trk=profile-badge-name">Alexander Chermenin</a>
+							</div>
+							<div class="LI-title">Big Data Engineer</div>
+						</div>
+					</div>
+					<ul class="more-info">
+						<li class="LI-field">at <a href="https://www.linkedin.com/company/epam-systems?trk=profile-badge-company">EPAM Systems</a></li>
+					</ul>
+					<div class="LI-profile-badge-footer">
+						<a href="https://ru.linkedin.com/in/chermenin/en?trk=profile-badge-cta" class="LI-view-profile">View LinkedIn profile</a>
+					</div>
+				</div>
+			</div>
+			<!-- end LI badge -->
 	</div>
 	<p>
 		Меня зовут Александр Черменин.
