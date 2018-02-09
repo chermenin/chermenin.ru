@@ -132,6 +132,11 @@ div.right-placed {
   margin-right: 70px;
 }
 
+pre {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
 @media all and (min-width: 500px) {
 
 	div.right-placed {
@@ -202,10 +207,4 @@ div.right-placed {
 		padding: 10px 25px;
 		margin-left: 50px;
 	}
-
-  pre {
-    overflow-x: auto;
-    padding-bottom: 10px;
-  }
-
 }
