@@ -129,6 +129,7 @@ div.right-placed {
   float: right;
   margin-left: 25px;
   margin-bottom: 25px;
+  margin-right: 70px;
 }
 
 @media all and (min-width: 500px) {
