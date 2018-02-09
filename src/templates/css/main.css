@@ -203,4 +203,9 @@ div.right-placed {
 		margin-left: 50px;
 	}
 
+  pre {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
 }
