@@ -35,7 +35,7 @@
 			{% block content %}
 			{% endblock %}
 			<p class="footer">
-				Последние изменения: {{ site.time|date('d.m.Y в H:i:s') }}.
+				Последние изменения: <span class="timestamp" title="дата и время {% if site.timezoneOffset == 0 %}по Гринвичу{% else %}GMT{% if site.timezoneOffset > 0 %}+{% endif %}{{ site.timezoneOffset }}{% endif %}">{{ site.time | date('d.m.Y в H:i:s') }}</span>.
 				Исходный код страницы доступен на <a href="https://github.com/chermenin/chermenin.ru">GitHub</a>.
 			</p>
 		</div>

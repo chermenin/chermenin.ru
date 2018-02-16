@@ -101,6 +101,11 @@ div#content {
 	margin: 60px 0 36px 0;
 }
 
+.footer > span.timestamp {
+  border-bottom: 1px dotted #333;
+  cursor: pointer;
+}
+
 .tag-count {
 	font-size: 14px;
 	color: #555;
