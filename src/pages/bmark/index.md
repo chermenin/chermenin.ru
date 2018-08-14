@@ -32,6 +32,8 @@ layout: default
     </table>
 </div>
 
+_Note:_ This application is free now! But you can [send me a cent](https://www.paypal.me/chermenin) if you want to support me. Thanks! :)
+
 About
 -----
 
