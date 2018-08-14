@@ -2,6 +2,18 @@
 layout: post
 title: x -> x.toString() vs Object::toString
 description: История о лямбдах и ссылках на методы.
+metadata: Описание разницы между лямбдами и ссылками на методы в Java
+keywords:
+    - java
+    - scala
+    - лямбда
+    - ссылка
+    - метод
+    - lambda
+    - reference
+    - method
+    - object
+    - string
 tags:
     - java
     - кодинг

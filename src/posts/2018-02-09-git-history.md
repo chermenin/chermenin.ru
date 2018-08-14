@@ -2,6 +2,17 @@
 layout: post
 title: 'Git: история в консоли'
 description: Настройка команд для просмотра истории коммитов.
+metadata: Настройка команд для удобного просмотра истории Git в консоли
+keywords:
+    - консоль
+    - история
+    - git
+    - console
+    - cli
+    - history
+    - log
+    - branch
+    - commit
 tags:
     - git
     - кодинг

@@ -2,6 +2,17 @@
 layout: post
 title: Battery Mark и недоступный результат
 description: Исправляем старые баги и получаем правильный ответ.
+metadata: Исправление ошибки с неотображаемым результатом в Battery Mark 
+keywords:
+    - батарея
+    - ноутбук
+    - статус
+    - проверка
+    - battery
+    - benchmark
+    - check
+    - status
+    - laptop
 tags:
     - battery mark
     - кодинг

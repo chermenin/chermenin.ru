@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <!-- Metadata. -->
+		<meta name="keywords" content="{% spaceless %}
+				{% for key in page.keywords %}
+					{{ key }},
+				{% endfor %}
+			{% endspaceless %}Александр,Черменин,Alex,Chermenin,epam,data,bigdata,данные,большие данные,блог,blog,программирование,programming,coding,java,personal,homepage,обработка данных,data processing,streaming,hadoop,spark,flink,apache,open source,oss" />
+        <meta name="description" content="{% if page.metadata %}{{ page.metadata }}{% else %}Блог о разработке, обработке данных и не только...{% endif %}" />
+
 		<meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
 		<title>{{ site.title }} - {{ page.title }}</title>
@@ -11,10 +19,6 @@
 
         <!-- RSS. -->
         <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="http://chermenin.ru/atom.xml" />
-
-        <!-- Metadata. -->
-        <meta name="keywords" content="Alex Chermenin,blog,programming,coding,java,oop,function,personal,homepage" />
-        <meta name="description" content="Персональная страничка Александра Черменина" />
     </head>
 	<body>
 		<div id="navigation">

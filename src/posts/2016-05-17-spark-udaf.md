@@ -2,6 +2,22 @@
 layout: post
 title: Spark UDAF
 description: Пишем собственную агрегирующую функцию.
+metadata: Реализация пользовательской агрегационной функции для Apache Spark
+keywords:
+    - обработка данных
+    - apache
+    - spark
+    - спарк
+    - структура данных
+    - элемент
+    - java
+    - scala
+    - json
+    - aggregation
+    - агрегация
+    - udf
+    - udtf
+    - udaf
 tags:
     - spark
     - bigdata

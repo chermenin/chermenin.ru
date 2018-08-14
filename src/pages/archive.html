@@ -1,14 +1,15 @@
 {% set page.title = "Архив записей" %}
+{% set page.metadata = "Список всех записей блога" %}
 {% extends 'default.html' %}
 {% block content %}
-	<h1>{{ page.title }}</h1>
-	<ul>
-		{% for post in site.posts %}
-			<li class="mini-post">
-				&laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒ 
-				<span class="post-timestamp">{{ post.date|date('d.m.Y') }}</span>
-				<p>{{ post.description|safe }}</p>    
-			</li>
-		{% endfor %}
-	</ul>
+    <h1>{{ page.title }}</h1>
+    <ul>
+        {% for post in site.posts %}
+            <li class="mini-post">
+                &laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒ 
+                <span class="post-timestamp">{{ post.date|date('d.m.Y') }}</span>
+                <p>{{ post.description|safe }}</p>    
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}

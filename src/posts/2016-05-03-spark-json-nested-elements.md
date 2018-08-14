@@ -2,6 +2,17 @@
 layout: post
 title: "Spark и JSON: вложенные элементы"
 description: Небольшая история об обработке структур данных.
+metadata: Обработка вложенных элементов структурированных данных с Apache Spark
+keywords:
+    - обработка данных
+    - apache
+    - spark
+    - спарк
+    - структура данных
+    - элемент
+    - java
+    - scala
+    - json
 tags:
     - spark
     - json

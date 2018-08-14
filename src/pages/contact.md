@@ -1,5 +1,21 @@
 ---
 title: Контакты
+metadata: Почта, ссылки и прочие контактные данные Александра Черменина
+keywords:
+    - почта
+    - mail
+    - социальные сети
+    - network
+    - facebook
+    - twitter
+    - messengers
+    - im
+    - telegram
+    - skype
+    - repositories
+    - репозитории
+    - код
+    - code
 layout: default
 ---
 

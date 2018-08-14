@@ -2,6 +2,14 @@
 layout: post
 title: Check Point SNX и Ubuntu 17.10
 description: Несколько слов о настройке VPN.
+metadata: Настройка Check Point SNX в среде ОС Ubuntu
+keywords:
+    - сеть
+    - vpn
+    - snx
+    - ubuntu
+    - linux
+    - checkpoint
 tags:
     - vpn
     - ubuntu

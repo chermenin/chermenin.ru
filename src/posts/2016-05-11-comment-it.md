@@ -2,6 +2,12 @@
 layout: post
 title: Comment it!
 description: Немного интерактива в блог.
+metadata: Добавление комментариев к статьям в блоге
+keywords:
+    - комментарии
+    - интерактив
+    - javascript
+    - disqus
 tags:
     - мысли
     - новости
