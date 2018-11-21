@@ -80,3 +80,23 @@ layout: default
     <a href="/atom.xml" type="application/atom+xml">Лента</a>&nbsp;&nbsp;&nbsp;<a href="/archive.html">Все записи</a>
     <span class="tag-count">({{ site.posts | size }})</span>
 </p>
+
+<p>Теги:
+    {% assign tag_list = site.pages | map: "tag" | compact %}
+    {% for tag in tag_list %}
+        {% assign tag_posts_count = 0 %}
+        {% for post in site.posts %}
+            {% for post_tag in post.tags %}
+                {% if tag == post_tag %}
+                    {% assign tag_posts_count = tag_posts_count | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+        {% if tag_posts_count > 0 %}
+            <a href="/tag/{{ tag | slugify: 'pretty' }}.html">{{ tag }}</a>
+            <span class="tag-count">({{ tag_posts_count }})</span>
+            {% if tag != tag_list.last %},{% endif %}
+        {% endif %}
+    {% endfor %}
+</p>
