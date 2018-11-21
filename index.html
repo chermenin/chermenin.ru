@@ -82,7 +82,12 @@ layout: default
 </p>
 
 <p>Теги:
-    {% assign tag_list = site.pages | map: "tag" | compact %}
+    {% capture raw_tags_list %}
+        {% for post in site.posts %}
+            {% for tag in post.tags %}{{ tag }},{% endfor %}
+        {% endfor %}
+    {% endcapture %}
+    {% assign tag_list = raw_tags_list | split: "," | uniq | sort %}
     {% for tag in tag_list %}
         {% assign tag_posts_count = 0 %}
         {% for post in site.posts %}
