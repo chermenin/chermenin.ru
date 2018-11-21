@@ -1,0 +1,102 @@
+---
+layout: default
+---
+
+<p>Привет!</p>
+<div class="right-placed">
+    <p><a href="https://stackexchange.com/users/5132293/alex-chermenin" target="_blank"><img src="https://stackexchange.com/users/flair/5132293.png" width="208" height="58" alt="Profile for Alex Chermenin on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="Profile for Alex Chermenin on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a></p>
+
+    <!-- begin LI badge -->
+    <div>
+        <link rel="stylesheet" href="/css/linkedin.css" />
+        <div dir="ltr" class="LI-badge-container-vertical-light LI-badge-container vertical light large" style="display: none">
+            <div class="LI-profile-badge-header LI-name-container">
+                <div class="LI-col">
+                    <div class="LI-profile-pic-container" style="background-image: url(/images/linkedin/background.jpg);">
+                      <img src="/images/linkedin/userpic.jpg" class="LI-profile-pic" alt="Alexander Chermenin"></div>
+                    </div>
+                    <div class="LI-col LI-header">
+                        <div class="LI-name">
+                            <a href="https://ru.linkedin.com/in/chermenin/en?trk=profile-badge-name">Alexander Chermenin</a>
+                        </div>
+                        <div class="LI-title">Big Data Engineer</div>
+                    </div>
+                </div>
+                <ul class="more-info">
+                    <li class="LI-field">at <a href="https://www.linkedin.com/company/epam-systems?trk=profile-badge-company">EPAM Systems</a></li>
+                </ul>
+                <div class="LI-profile-badge-footer">
+                    <a href="https://ru.linkedin.com/in/chermenin/en?trk=profile-badge-cta" class="LI-view-profile">View LinkedIn profile</a>
+                </div>
+            </div>
+        </div>
+        <!-- end LI badge -->
+</div>
+<p>
+    Меня зовут Александр Черменин.
+</p>
+<ul>
+    <li>Если Вы заглянули сюда случайно - можете просто почитать некоторые <a href="/archive.html">мои статьи</a>, которые я иногда сюда пишу.</li>
+    <li>
+        В случае, если Вам нужна помощь в разработке чего-либо или консультация по работе с инструментам обработки данных (таких как Hadoop, Spark или Flink)
+        или их настройке, то <a href="/contact.html">напишите мне</a> и мы обязательно решим Вашу проблему.</li>
+    <li>А для тех, кто хочет предложить мне работу, здесь есть отдельная страница с <a href="/cv.html">моим резюме</a> (да, там же можно скачать актуальную версию в PDF).</li>
+</ul>
+<p>
+    Люблю писать код. Делал это в таких компаниях, как <a target="_blank" href="http://prognoz.com">Прогноз</a>,
+    <a target="_blank" href="http://proitr.ru">ProIT</a>, <a target="_blank" href="http://dartit.ru">DartIT</a> и даже
+    <a target="_blank" href="https://sber-tech.com/">СберТех</a>. Сейчас занимаюсь <i>большими данными</i>
+    в компании <a target="_blank" href="https://www.epam.com/">EPAM</a>.
+</p>
+<p>А ещё я время от времени <a href="http://code.chermenin.ru">пишу код</a> для открытых проектов.</p>
+<p>
+    Кстати, здесь можно найти информацию о некоторых моих программах (или даже скачать их):
+    <a href="/bmark/ru">Battery Mark</a>, <a href="/files/gstudio/gs2007-1.0.win32.zip">Graf Studio</a>,
+    <a href="/files/rmc/rmc-0.1.en.x86.zip">RMC</a>.
+</p>
+<p>
+    И для тех, кому интересно: Родился и вырос в небольшом уральском посёлке
+    <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%88%D0%B8%D1%8F">Паши́я</a>.
+    С детства имел большой интерес к компьютерам и информационным технологиям. Примерно с 9 лет начал писать код,
+    сперва с 8-битной консолью на G-BASIC, со временем, пройдя путь через QuickBasic, Delphi, C#, затронув PHP, C++
+    и даже в кой-то мере Haskell, нашёл своё в языке Java. Уже почти 5 лет пишу предпочтительно на
+    нём, иногда разбавляя порциями <a target="_blank" href="http://scala-lang.org/">Scala</a>.
+</p>
+<p>&nbsp;</p>
+
+<h2>Последние записи</h2>
+<ul>
+    {% for post in site.posts limit:4 %}
+      <li class="mini-post">
+          &laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒
+          <span class="post-timestamp">{{ post.date | date: "%d.%m.%Y" }}</span>
+          <p>{{ post.description|safe }}</p>
+      </li>
+    {% endfor %}
+</ul>
+
+<p>
+    <span class="rss-icon">&#xe81a;</span>
+    <a href="/atom.xml" type="application/atom+xml">Лента</a>&nbsp;&nbsp;&nbsp;<a href="/archive.html">Все записи</a>
+    <span class="tag-count">({{ site.posts | size }})</span>
+</p>
+
+<p>Теги:
+    {% assign tag_list = site.pages | map: "tag" | compact %}
+    {% for tag in tag_list %}
+        {% assign tag_posts_count = 0 %}
+        {% for post in site.posts %}
+            {% for post_tag in post.tags %}
+                {% if tag == post_tag %}
+                    {% assign tag_posts_count = tag_posts_count | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+        {% if tag_posts_count > 0 %}
+            <a href="/tag/{{ tag | slugify: 'pretty' }}.html">{{ tag }}</a>
+            <span class="tag-count">({{ tag_posts_count }})</span>
+            {% if tag != tag_list.last %},{% endif %}
+        {% endif %}
+    {% endfor %}
+</p>
