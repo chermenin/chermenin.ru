@@ -9,7 +9,7 @@
 title: alex::chermenin
 email: alex@chermenin.ru
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://chermenin.ru" # the base hostname & protocol for your site
+url: "https://chermenin.ru" # the base hostname & protocol for your site
 twitter_username: alex_chermenin
 github_username:  chermenin
 
