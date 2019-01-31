@@ -4,15 +4,11 @@ title: page.tag
 ---
 <h1>{{ page.tag }}</h1>
 <ul>
-{% for post in site.posts %}
-	{% for tag in post.tags %}
-		{% if tag == page.tag %}
-			<li class="mini-post">
-				&laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒ 
-				<span class="post-timestamp">{{ post.date | date: "%d.%m.%Y" }}</span>
-				<p>{{ post.description|safe }}</p>    
-			</li>
-		{% endif %}
+	{% for post in site.tags[page.tag] %}
+	<li class="mini-post">
+		&laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒ 
+		<span class="post-timestamp">{{ post.date | date: "%d.%m.%Y" }}</span>
+		<p>{{ post.description|safe }}</p>    
+	</li>
 	{% endfor %}
-{% endfor %}
 </ul>

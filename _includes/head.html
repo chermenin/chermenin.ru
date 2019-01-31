@@ -1,3 +1,7 @@
+{% if site.tags != "" %}
+  {% include collect_tags.html %}
+{% endif %}
+
 <head>
   <!-- Metadata. -->
   <meta name="keywords" content="{% for key in page.keywords %}{{ key }},{% endfor %}Александр,Черменин,Alex,Chermenin,epam,data,bigdata,данные,большие данные,блог,blog,программирование,programming,coding,java,personal,homepage,обработка данных,data processing,streaming,hadoop,spark,flink,apache,open source,oss" />

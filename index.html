@@ -82,26 +82,11 @@ layout: default
 </p>
 
 <p>Теги:
-    {% capture raw_tags_list %}
-        {% for post in site.posts %}
-            {% for tag in post.tags %}{{ tag }},{% endfor %}
-        {% endfor %}
-    {% endcapture %}
-    {% assign tag_list = raw_tags_list | split: "," | uniq | sort %}
-    {% for tag in tag_list %}
-        {% assign tag_posts_count = 0 %}
-        {% for post in site.posts %}
-            {% for post_tag in post.tags %}
-                {% if tag == post_tag %}
-                    {% assign tag_posts_count = tag_posts_count | plus: 1 %}
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
-
-        {% if tag_posts_count > 0 %}
-            <a href="/tag/{{ tag | slugify: 'pretty' }}.html">{{ tag }}</a>
-            <span class="tag-count">({{ tag_posts_count }})</span>
-            {% if tag != tag_list.last %},{% endif %}
-        {% endif %}
+    {% assign tags_count = 0 %}
+    {% for tag in site.tags %}
+        {% assign tags_count = tags_count | plus: 1 %}
+        <a href="/tag/{{ tag[0] | slugify: 'pretty' }}.html">{{ tag[0] }}</a>
+        <span class="tag-count">({{ tag[1] | size }})</span>
+        {% if tags_count < site.tags.size %},{% endif %}
     {% endfor %}
 </p>
