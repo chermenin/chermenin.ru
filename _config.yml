@@ -15,15 +15,3 @@ github_username:  chermenin
 
 # Build settings
 markdown: kramdown
-
-plugins:
-  - jekyll-tagging
-
-tag_page_layout: tag
-tag_page_dir: tag
-tag_permalink_style: :pretty.html
-
-collections:
-  tags:
-    output: true
-    permalink: /tags/:path/
