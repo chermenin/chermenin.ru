@@ -39,10 +39,10 @@ layout: default
 
 **Почта**: [alex@chermenin.ru](mailto:alex@chermenin.ru)  
 **Telegram**: [@chermenin](https://telegram.me/chermenin)  
-**Skype**: imtec_
+**Skype**: [imtec_](skype:imtec_?chat)
 
 Прочие полезности
 -----------------
 
-**Github**: https://github.com/chermenin  
-**Bitbucket**: https://bitbucket.org/chermenin
+**Github**: [https://github.com/chermenin](https://github.com/chermenin)  
+**Bitbucket**: [https://bitbucket.org/chermenin](https://bitbucket.org/chermenin)
