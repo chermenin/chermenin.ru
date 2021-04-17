@@ -30,7 +30,7 @@ layout: default
 Социальные сети
 ---------------
 
-**ВКонтакте**: [achermenin](https://vk.com/achermenin)  
+**ВКонтакте**: [chermenin](https://vk.com/chermenin)  
 **Facebook**: [chermenin](https://facebook.com/chermenin)  
 **Twitter**: [alex_chermenin](https://twitter.com/alex_chermenin)
 
