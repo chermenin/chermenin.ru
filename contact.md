@@ -25,8 +25,8 @@ layout: default
 Социальные сети
 ---------------
 
-**VK**: [chermenin](https://vk.com/chermenin)  
-**OK**: [chermenin](https://ok.ru/aleksandr.chermenin)  
+**ВКонтакте**: [chermenin](https://vk.com/chermenin)  
+**Одноклассники**: [aleksandr.chermenin](https://ok.ru/aleksandr.chermenin)  
 
 Почта и мессенджеры
 -------------------
