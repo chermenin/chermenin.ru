@@ -93,12 +93,19 @@ layout: default
 </p>
 
 <p>Теги:
-    {% assign tags_count = 0 %}
-    {% assign tags_list = site.tags | sort_by_size: 1 | reverse %}
-    {% for tag in tags_list %}
-        {% assign tags_count = tags_count | plus: 1 %}
-        <a href="/tag/{{ tag[0] | slugify: 'pretty' }}.html">{{ tag[0] }}</a>
-        <span class="tag-count">({{ tag[1] | size }})</span>
-        {% if tags_count < site.tags.size %},{% endif %}
+    {% capture tags %}
+      {% for tag in site.tags %}
+        {{ tag[1].size | plus: 1000000 }}#{{ tag[0] }}#{{ tag[1].size }}
+      {% endfor %}
+    {% endcapture %}
+    
+    {% assign sorted_tags = tags | split:' ' | sort | reverse %}
+    {% for tag in sorted_tags %}
+      {% assign tag_items = tag | split: '#' %}
+      {% assign tag_name = tag_items[1] %}
+      {% assign tag_count = tag_items[2] %}
+      <a href="/tag/{{ tag_name | slugify: 'pretty' }}.html">{{ tag_name }}</a>
+      <span class="tag-count">({{ tag_count }})</span>
+      {% unless forloop.last %},{% endunless %}
     {% endfor %}
 </p>
