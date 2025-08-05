@@ -100,9 +100,9 @@ layout: default
         {% endfor %}
     {% endcapture %}
     
-    {% assign sorted_tags = tags | split:'### ' | sort | reverse %}
+    {% assign sorted_tags = tags | split:'###' | sort | reverse %}
     {% for tag in sorted_tags %}
-      {% assign tag_items = tag | split: '#' %}
+      {% assign tag_items = tag | split: '##' %}
       {% assign tag_name = tag_items[1] %}
       {% assign tag_count = tag_items[2] %}
       <a href="/tag/{{ tag_name | slugify: 'pretty' }}.html">{{ tag_name }}</a>
