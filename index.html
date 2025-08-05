@@ -94,12 +94,13 @@ layout: default
 
 <p>Теги:
     {% capture tags %}
-      {% for tag in site.tags %}
-        {{ tag[1].size | plus: 1000000 }}#{{ tag[0] }}#{{ tag[1].size }}
-      {% endfor %}
+        {% for tag in site.tags %}
+            {{ tag[1].size | plus: 1000000 }}##{{ tag[0] }}##{{ tag[1].size }}
+            {% unless forloop.last %}###{% endunless %}
+        {% endfor %}
     {% endcapture %}
     
-    {% assign sorted_tags = tags | split:' ' | sort | reverse %}
+    {% assign sorted_tags = tags | split:'### ' | sort | reverse %}
     {% for tag in sorted_tags %}
       {% assign tag_items = tag | split: '#' %}
       {% assign tag_name = tag_items[1] %}
