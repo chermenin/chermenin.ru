@@ -104,7 +104,7 @@ layout: default
     {% for tag in sorted_tags %}
       {% assign tag_items = tag | split: '##' %}
       {% assign tag_name = tag_items[1] %}
-      {% assign tag_count = tag_items[2] %}
+      {% assign tag_count = tag_items[2] | strip %}
       <a href="/tag/{{ tag_name | slugify: 'pretty' }}.html">{{ tag_name }}</a>
       <span class="tag-count">({{ tag_count }})</span>
       {% unless forloop.last %},{% endunless %}
