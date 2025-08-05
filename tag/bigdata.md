@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: bigdata"
+title: "#bigdata"
 tag: bigdata
 robots: noindex
 ---

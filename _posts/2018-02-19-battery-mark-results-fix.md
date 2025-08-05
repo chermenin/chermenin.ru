@@ -14,7 +14,7 @@ keywords:
     - status
     - laptop
 tags:
-    - battery mark
+    - batterymark
     - кодинг
     - ошибки
 ---

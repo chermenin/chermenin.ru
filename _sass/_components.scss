@@ -1,0 +1,106 @@
+.home-button {
+  position: relative;
+  top: 6px;
+  transition: none;
+}
+
+.home-button:hover {
+  border: none;
+}
+
+.article-meta {
+  color: $secondary-color;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.post-preview {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.0rem;
+  border-bottom: 1px solid $border-color;
+}
+    
+.all-posts {
+  padding: 3rem;
+  text-align: center;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.cta-card {
+  border: 1px solid $border-color;
+  padding: 1.5rem;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+}
+
+.experience-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.about {
+  font-style: italic;
+  margin-bottom: 3rem;
+  color: $secondary-color;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.cta-card {
+  border: 1px solid $border-color;
+  padding: 1.5rem;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.cta-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-icon {
+  color: $accent-color;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: $accent-color;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}

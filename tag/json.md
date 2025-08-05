@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: json"
+title: "#json"
 tag: json
 robots: noindex
 ---

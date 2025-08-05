@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: spark"
+title: "#spark"
 tag: spark
 robots: noindex
 ---

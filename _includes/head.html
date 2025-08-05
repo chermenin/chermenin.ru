@@ -1,24 +1,25 @@
 {% if site.tags != "" %}
-  {% include collect_tags.html %}
+    {% include collect_tags.html %}
 {% endif %}
 
 <head>
-  <!-- Metadata. -->
-  <meta name="keywords" content="{% for key in page.keywords %}{{ key }},{% endfor %}Александр,Черменин,Alex,Chermenin,epam,data,bigdata,данные,большие данные,блог,blog,программирование,programming,coding,java,personal,homepage,обработка данных,data processing,streaming,hadoop,spark,flink,apache,open source,oss" />
-  <meta name="description" content="{% if page.metadata %}{{ page.metadata }}{% else %}Блог о разработке, обработке данных и не только...{% endif %}" />
+    <!-- Metadata. -->
+    <meta name="keywords" content="{% for key in page.keywords %}{{ key }},{% endfor %}Александр,Черменин,Alex,Chermenin,epam,data,bigdata,данные,большие данные,блог,blog,программирование,programming,coding,java,personal,homepage,обработка данных,data processing,streaming,hadoop,spark,flink,apache,open source,oss" />
+    <meta name="description" content="{% if page.metadata %}{{ page.metadata }}{% else %}Блог о разработке, обработке данных и не только...{% endif %}" />
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="yandex-verification" content="c3912ad84010e899" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="yandex-verification" content="c3912ad84010e899" />
 
-  <title>{{ site.title | escape }}{% if page.title %} - {{ page.title | escape }}{% else %}{% if page.tag %} - {{ page.tag | escape }}{% endif %}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <title>{% if page.title %}{{ page.title | escape }} · {% else %}{% if page.tag %}{{ page.tag | escape }} · {% endif %}{% endif %}{{ site.title | escape }}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <!-- Stylesheets. -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,600,600italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link href="/css/main.css" rel="stylesheet" />
+    <!-- Stylesheets. -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- RSS. -->
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <!-- RSS. -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 </head>

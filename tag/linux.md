@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: linux"
+title: "#linux"
 tag: linux
 robots: noindex
 ---

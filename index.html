@@ -2,111 +2,45 @@
 layout: default
 ---
 
-<p>Привет!</p>
-<div class="right-placed">
-    <!--
-    <p><a href="https://stackexchange.com/users/5132293/alex-chermenin" target="_blank"><img src="https://stackexchange.com/users/flair/5132293.png" width="208" height="58" alt="Profile for Alex Chermenin on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="Profile for Alex Chermenin on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a></p>
-    -->
-    <!-- begin LI badge -->
-    <div>
-        <link rel="stylesheet" href="/css/linkedin.css" />
-        <div dir="ltr" class="LI-badge-container-vertical-light LI-badge-container vertical light large" style="display: none">
-            <div class="LI-profile-badge-header LI-name-container">
-                <div class="LI-col">
-                    <div class="LI-profile-pic-container" style="background-image: url(/images/linkedin/background.png);">
-                      <img src="/images/linkedin/userpic.jpg" class="LI-profile-pic" alt="Alexander Chermenin"></div>
-                    </div>
-                    <div class="LI-col LI-header">
-                        <div class="LI-name">
-                            <a href="https://ru.linkedin.com/in/chermenin/en?trk=profile-badge-name">Alexander Chermenin</a>
-                        </div>
-                        <div class="LI-title">Data Engineer</div>
-                    </div>
-                </div>
-                <ul class="more-info">
-                    <li class="LI-field">at <a href="https://www.linkedin.com/company/odnoklassniki-ru?trk=profile-badge-company">OK.RU</a></li>
-                </ul>
-                <div class="LI-profile-badge-footer">
-                    <a href="https://ru.linkedin.com/in/chermenin/en?trk=profile-badge-cta" class="LI-view-profile">View LinkedIn profile</a>
-                </div>
-            </div>
-        </div>
-        <!-- end LI badge -->
+<div class="about">
+    <p>Data Engineer с 10+ лет опыта в распределённых системах.<br />Специализация: Apache Spark, организация ETL-процессов.<br />Автор некоторых open-source проектов.</p>
+    <p>В настоящее время работаю над оптимизацией потоков данных в&nbsp;<a target="_blank" href="https://ok.ru">Одноклассниках</a>.</p>
 </div>
-<p>
-    Меня зовут Александр Черменин.
-</p>
-<ul>
-    <li><b>Вы здесь случайно?</b> <a href="/archive.html">Загляните&nbsp;в&nbsp;блог</a></li>
-    <li><b>Нужна помощь с данными?</b> <a href="/contact.html">Напишите&nbsp;мне</a></li>
-    <li><b>Хотите предложить работу?</b> <a href="/cv.html">Смотрите&nbsp;резюме</a></li>
-</ul>
-<p>
-    Люблю писать код. Делал это в таких компаниях, как
-    <!-- for history --
-    <a target="_blank" title="RIP" href="https://web.archive.org/web/20191018165634/http://www.prognoz.com/">Прогноз</a>,
-    <a target="_blank" href="http://proitr.ru">ProIT</a>,
-    <a target="_blank" title="RIP" href="https://web.archive.org/web/20160416054351/http://dartit.ru/">DartIT</a>,
-    -->
-    <a target="_blank" href="https://sber-tech.com/">СберТех</a>,
-    <a target="_blank" href="https://www.epam.com/">EPAM</a>,
-    <a target="_blank" href="https://www.wrike.com/">Wrike</a>
-    и др.
-</p>
-<p>
-    Сейчас занимаюсь данными в <a target="_blank" href="https://ok.ru">Одноклассниках</a>,
-    продолжаю писать на Java, Kotlin и Python и исследовать внутренности Apache Spark.
-</p>
-<!-- <p>
-    А ещё <a href="http://code.chermenin.ru">пишу код</a>.
-</p>
-<p>
-    Кстати, здесь можно найти информацию о некоторых моих программах (или даже скачать их):
-    <a href="/bmark/ru">Battery Mark</a>, <a href="/files/gstudio/gs2007-1.0.win32.zip">Graf Studio</a>,
-    <a href="/files/rmc/rmc-0.1.en.x86.zip">RMC</a>.
-</p> -->
-<!-- <p>
-    И для тех, кому интересно: Родился и вырос в небольшом уральском посёлке
-    <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%88%D0%B8%D1%8F">Паши́я</a>.
-    С детства имел большой интерес к компьютерам и информационным технологиям. Примерно с 9 лет начал писать код,
-    сперва с 8-битной консолью на G-BASIC, со временем, пройдя путь через QuickBasic, Delphi, C#, затронув PHP, C++
-    и даже в кой-то мере Haskell, нашёл своё в языке Java. Уже почти 5 лет пишу предпочтительно на
-    нём, иногда разбавляя порциями <a target="_blank" href="http://scala-lang.org/">Scala</a>.
-</p> -->
-<p>&nbsp;</p>
 
-<h2>Последние записи</h2>
-<ul>
-    {% for post in site.posts limit:4 %}
-      <li class="mini-post">
-          &laquo;<a href="{{ post.url }}"><span class="post-title">{{post.title}}</span></a>&raquo; ‒
-          <span class="post-timestamp">{{ post.date | date: "%d.%m.%Y" }}</span>
-          <p>{{ post.description|safe }}</p>
-      </li>
+<div class="cta-grid">
+    <div class="cta-card">
+        <div class="cta-title">
+            <i data-lucide="pen-tool" class="cta-icon"></i>
+            <span>Заказать консультацию</span>
+        </div>
+        <p>Нужна помощь с Apache Spark или чем-то ещё?</p>
+        <a href="/contact" class="cta-button">Обсудить</a>
+    </div>
+    <div class="cta-card">
+        <div class="cta-title">
+            <i data-lucide="github" class="cta-icon"></i>
+            <span>Проекты</span>
+        </div>
+        <p>Мой вклад в open-source<br />и не только...</p>
+        <a href="https://code.chermenin.ru" class="cta-button">Посмотреть код</a>
+    </div>
+</div>
+
+<main>
+    {% for post in site.posts limit: 3 %}
+    <article class="post-preview">
+        <h2><a href="{{ post.url }}">«{{post.title}}»</a></h2>
+        <p>{{ post.description | safe }}</p>
+    </article>
     {% endfor %}
-</ul>
 
-<p>
-    <span class="rss-icon">&#xe809;</span>
-    <a href="/atom.xml" type="application/atom+xml">Лента</a>&nbsp;&nbsp;&nbsp;<a href="/archive.html">Все записи</a>
-    <span class="tag-count">({{ site.posts | size }})</span>
-</p>
+    <div class="all-posts">
+        <a href="/archive">Все записи →</a>
 
-<p>Теги:
-    {% capture tags %}
-        {% for tag in site.tags %}
-            {{ tag[1].size | plus: 1000000 }}##{{ tag[0] }}##{{ tag[1].size }}
-            {% unless forloop.last %}###{% endunless %}
-        {% endfor %}
-    {% endcapture %}
-    
-    {% assign sorted_tags = tags | split:'###' | sort | reverse %}
-    {% for tag in sorted_tags %}
-      {% assign tag_items = tag | split: '##' %}
-      {% assign tag_name = tag_items[1] %}
-      {% assign tag_count = tag_items[2] | strip %}
-      <a href="/tag/{{ tag_name | slugify: 'pretty' }}.html">{{ tag_name }}</a>
-      <span class="tag-count">({{ tag_count }})</span>
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-</p>
+        <p>
+            {% for tag in site.tags %}
+            <a href="/tag/{{ tag[0] | slugify: 'pretty' }}">#{{ tag[0] }}</a>
+            {% endfor %}
+        </p>
+    </div>
+</main>
