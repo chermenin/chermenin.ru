@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign months = "января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря" | split: "|" %}
 
 <article class="post">
     <div class="content">
@@ -8,7 +9,10 @@ layout: default
     </div>
 
     <div class="article-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d.%m.%Y" }}</time>
+        {% assign day = page.date | date: "%-d" %}
+        {% assign month_index = page.date | date: "%-m" | minus: 1 %}
+        {% assign year = page.date | date: "%Y" %} 
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ day }} {{ months[month_index] }} {{ year }}</time>
         {% if page.tags %} ·
         {% for tag in page.tags %}
         <a href="/tag/{{ tag | slugify: 'pretty' }}">#{{ tag }}</a>{% if loop.index < page.tags.length %},{% endif %}

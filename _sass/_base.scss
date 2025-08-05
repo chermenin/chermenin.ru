@@ -27,7 +27,7 @@ a {
 code, pre {
   font-family: $font-mono;
   font-size: 0.9em;
-  background: rgba(0,0,0,0.05);
+  background: #eee;
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }
@@ -36,6 +36,10 @@ pre {
   padding: 1em;
   overflow-x: auto;
   border-left: 2px solid $accent-color;
+}
+
+pre > code {
+  padding: 0;
 }
 
 img {

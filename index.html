@@ -37,7 +37,7 @@ layout: default
     <div class="all-posts">
         <a href="/archive">Все записи →</a>
 
-        <p>
+        <p class="article-meta">
             {% for tag in site.tags %}
             <a href="/tag/{{ tag[0] | slugify: 'pretty' }}">#{{ tag[0] }}</a>
             {% endfor %}

@@ -104,3 +104,122 @@
   border-radius: 4px;
   font-size: 0.9rem;
 }
+
+.contact-methods {
+  margin: 3rem 0;
+}
+
+.contact-card {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: $accent-color;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.social-card:hover {
+  background: rgba(139, 69, 19, 0.05);
+}
+
+.job-section {
+  margin-bottom: 3rem;
+}
+
+.job {
+  margin-bottom: 2.5rem;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.job-title {
+  font-weight: bold;
+}
+
+.company {
+  color: $accent-color;
+}
+
+.job-date {
+  color: $secondary-color;
+  font-style: italic;
+}
+
+.achievement {
+  margin-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.achievement:before {
+  content: "•";
+  color: $accent-color;
+  position: absolute;
+  left: -1rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-category h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.project-card {
+  background: rgba(139, 69, 19, 0.05);
+  padding: 1.2rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.pdf-download {
+  display: block;
+  background: $accent-color;
+  color: white;
+  padding: 0.7rem 1.3rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  float: right;
+}
