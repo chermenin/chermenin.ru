@@ -94,7 +94,7 @@ layout: default
 
 <p>Теги:
     {% assign tags_count = 0 %}
-    {% assign tags_list = site.tags | sort: '1.size' | reverse %}
+    {% assign tags_list = site.tags | sort_by_size: 1 | reverse %}
     {% for tag in tags_list %}
         {% assign tags_count = tags_count | plus: 1 %}
         <a href="/tag/{{ tag[0] | slugify: 'pretty' }}.html">{{ tag[0] }}</a>
