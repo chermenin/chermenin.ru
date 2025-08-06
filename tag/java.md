@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: java"
+title: "#java"
 tag: java
 robots: noindex
 ---

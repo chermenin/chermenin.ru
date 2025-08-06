@@ -17,16 +17,16 @@ layout: default
     <table style="display:inline-block">
         <thead>
             <tr>
-                <th style="text-align:center"><a target="_blank" href="/files/bmark/bmark-1.1.int.win32.zip"><img src="/images/buttons/windows_en.png" alt="Download for Windows" title="Download for Windows"></a></th>
-                <th></th>
-                <th style="text-align:center"><a target="_blank" href="https://itunes.apple.com/us/app/battery-mark/id1022826698"><img src="/images/buttons/appstore_en.png" alt="Download for Mac" title="Download for Mac"></a></th>
+                <th style="text-align:center"><a style="transition:none;border:none!important;" target="_blank" href="/files/bmark/bmark-1.1.int.win32.zip"><img src="/images/buttons/windows_en.png" alt="Download for Windows" title="Download for Windows"></a></th>
+                <!-- <th></th>
+                <th style="text-align:center"><a target="_blank" href="https://itunes.apple.com/us/app/battery-mark/id1022826698"><img src="/images/buttons/appstore_en.png" alt="Download for Mac" title="Download for Mac"></a></th> -->
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td style="text-align:center"><sup>Windows XP or later</sup></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td style="text-align:center"><sup>OS X 10.7 or later</sup></td>
+                <!-- <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td style="text-align:center"><sup>OS X 10.7 or later</sup></td> -->
             </tr>
         </tbody>
     </table>

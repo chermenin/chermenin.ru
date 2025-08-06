@@ -1,0 +1,260 @@
+.home-button {
+  position: relative;
+  top: 4px;
+  transition: none;
+}
+
+.home-button:hover {
+  border: none;
+}
+
+.article-meta {
+  color: $secondary-color;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.post-preview {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.0rem;
+  border-bottom: 1px solid $border-color;
+}
+    
+.all-posts {
+  padding: 3rem;
+  text-align: center;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.cta-card {
+  border: 1px solid $border-color;
+  padding: 1.5rem;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+}
+
+.experience-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.about {
+  font-style: italic;
+  margin-bottom: 3rem;
+  color: $secondary-color;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.cta-card {
+  border: 1px solid $border-color;
+  padding: 1.5rem;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.cta-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-icon {
+  color: $accent-color;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: $accent-color;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.contact-methods {
+  margin: 3rem 0;
+}
+
+.contact-card {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: $accent-color;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+  background: rgba(139, 69, 19, 0.05);
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+}
+
+.social-card:hover {
+  background: rgba(139, 69, 19, 0.05);
+}
+
+.social-card span {
+  white-space: nowrap;
+}
+
+.social-card > .icon {
+  position: relative;
+  top: -2px;
+}
+
+.job-section {
+  margin-bottom: 3rem;
+}
+
+.job {
+  margin-bottom: 2.5rem;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.job-title {
+  font-weight: bold;
+}
+
+.company {
+  color: $accent-color;
+}
+
+.job-date {
+  color: $secondary-color;
+  font-style: italic;
+}
+
+.achievement {
+  margin-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.achievement:before {
+  content: "•";
+  color: $accent-color;
+  position: absolute;
+  left: -1rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-category h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.project-card {
+  background: rgba(139, 69, 19, 0.05);
+  padding: 1.2rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.pdf-download {
+  display: block;
+  background: $accent-color;
+  color: white;
+  padding: 0.7rem 1.3rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  float: right;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+  }
+}
+
+.quote-highlight {
+  background: rgba(139, 69, 19, 0.1);
+  padding: 1rem;
+  border-left: 3px solid $accent-color;
+  margin: 1.5rem 0;
+}

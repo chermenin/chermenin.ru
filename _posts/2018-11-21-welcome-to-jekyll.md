@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Welcome to Jekyll!
-description: Переезд блога на новый движок
+description: Переезд блога на новый движок.
 metadata: Перевод блога на использование Jekyll вместо сборки Gulp'ом
 keywords:
     - jekyll

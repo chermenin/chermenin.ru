@@ -21,16 +21,16 @@ layout: default
     <table style="display:inline-block">
         <thead>
             <tr>
-                <th style="text-align:center"><a target="_blank" href="/files/bmark/bmark-1.1.int.win32.zip"><img src="/images/buttons/windows_ru.png" alt="Загрузить для Windows" title="Загрузить для Windows"></a></th>
-                <th></th>
-                <th style="text-align:center"><a target="_blank" href="https://itunes.apple.com/us/app/battery-mark/id1022826698"><img src="/images/buttons/appstore_ru.png" alt="Загрузить для Mac" title="Загрузить для Mac"></a></th>
+                <th style="text-align:center"><a style="transition:none;border:none!important;" target="_blank" href="/files/bmark/bmark-1.1.int.win32.zip"><img src="/images/buttons/windows_ru.png" alt="Загрузить для Windows" title="Загрузить для Windows"></a></th>
+                <!-- <th></th>
+                <th style="text-align:center"><a target="_blank" href="https://itunes.apple.com/us/app/battery-mark/id1022826698"><img src="/images/buttons/appstore_ru.png" alt="Загрузить для Mac" title="Загрузить для Mac"></a></th> -->
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td style="text-align:center"><sup>Windows XP и выше</sup></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td style="text-align:center"><sup>OS X 10.7 и выше</sup></td>
+                <!-- <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td style="text-align:center"><sup>OS X 10.7 и выше</sup></td> -->
             </tr>
         </tbody>
     </table>

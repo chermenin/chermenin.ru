@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: flink"
+title: "#flink"
 tag: flink
 robots: noindex
 ---

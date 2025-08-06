@@ -1,0 +1,48 @@
+body {
+  font-family: $font-main, Georgia, serif;
+  line-height: 1.7;
+  color: $text-color;
+  background: $background-color;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: currentColor;
+  }
+}
+
+code, pre {
+  font-family: $font-mono, Courier, monospace;
+  font-size: 0.9em;
+  background: #eee;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  border-left: 2px solid $accent-color;
+}
+
+pre > code {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,28 @@
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid $border-color;
+  color: $secondary-color;
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  
+  h1, h2, h3 {
+    margin-top: 1.8rem;
+  }
+}
