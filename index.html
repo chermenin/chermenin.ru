@@ -38,8 +38,11 @@ layout: default
         <a href="/archive">Все записи →</a>
 
         <p class="article-meta">
-            {% for tag in site.tags %}
-            <a href="/tag/{{ tag[0] | slugify: 'pretty' }}">#{{ tag[0] }}</a>
+            {% capture tags %}{% for tag in site.tags %}{{ tag[0] }}{% unless forloop.last %}###{% endunless %}{% endfor %}{% endcapture %}
+            {% assign sorted_tags = tags | split:'###' | sort_natural %}
+            {% for tag in sorted_tags %}
+            {% assign tag_name = tag | strip %}
+            <a href="/tag/{{ tag_name | slugify: 'pretty' }}">#{{ tag_name }}</a>
             {% endfor %}
         </p>
     </div>

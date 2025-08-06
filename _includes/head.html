@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="yandex-verification" content="c3912ad84010e899" />
 
-    <title>{% if page.title %}{{ page.title | escape }} · {% else %}{% if page.tag %}{{ page.tag | escape }} · {% endif %}{% endif %}{{ site.title | escape }}</title>
+    <title>{% if page.tag %}{{ page.tag | escape }} · {% else %}{% if page.title %}{{ page.title | escape }} · {% endif %}{% endif %}{{ site.title | escape }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <!-- Stylesheets. -->
