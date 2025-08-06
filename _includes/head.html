@@ -14,8 +14,15 @@
     <title>{% if page.tag %}{{ page.tag | escape }} · {% else %}{% if page.title %}{{ page.title | escape }} · {% endif %}{% endif %}{{ site.title | escape }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+    <!-- Fonts -->
+    <link rel="preload" href="{{ '/assets/fonts/lora/Lora-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/lora/Lora-Italic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/plex/IBMPlexMono-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/plex/IBMPlexMono-Italic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/plex/IBMPlexMono-Bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/plex/IBMPlexMono-BoldItalic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+
     <!-- Stylesheets. -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <script src="https://unpkg.com/lucide@latest"></script>
 
