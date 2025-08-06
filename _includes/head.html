@@ -4,7 +4,7 @@
 
 <head>
     <!-- Metadata. -->
-    <meta name="keywords" content="{% for key in page.keywords %}{{ key }},{% endfor %}Александр,Черменин,Alex,Chermenin,epam,data,bigdata,данные,большие данные,блог,blog,программирование,programming,coding,java,personal,homepage,обработка данных,data processing,streaming,hadoop,spark,flink,apache,open source,oss" />
+    <meta name="keywords" content="{% for key in page.keywords %}{{ key }},{% endfor %}Александр,Черменин,Alex,Chermenin,ok,vk,wrike,epam,data,bigdata,данные,большие данные,блог,blog,программирование,programming,coding,java,personal,homepage,обработка данных,data processing,streaming,hadoop,spark,flink,apache,open source,oss" />
     <meta name="description" content="{% if page.metadata %}{{ page.metadata }}{% else %}Блог о разработке, обработке данных и не только...{% endif %}" />
 
     <meta charset="UTF-8">
@@ -24,7 +24,9 @@
 
     <!-- Stylesheets. -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Icons -->
+    {% include icons-sprite.svg %}
 
     <!-- RSS. -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

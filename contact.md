@@ -22,7 +22,7 @@ layout: default
 <div class="contact-methods">
     <div class="contact-card">
         <div class="contact-title">
-            <i data-lucide="mail" class="contact-icon"></i>
+            <svg class="icon"><use xlink:href="#mail"></use></svg>
             <span>Электронная почта</span>
         </div>
         <p><a href="mailto:alex@chermenin.ru">alex@chermenin.ru</a></p>
@@ -31,7 +31,7 @@ layout: default
 
     <div class="contact-card">
         <div class="contact-title">
-            <i data-lucide="send" class="contact-icon"></i>
+            <svg class="icon"><use xlink:href="#send"></use></svg>
             <span>Телеграм</span>
         </div>
         <p><a href="https://t.me/chermenin" target="_blank">@chermenin</a></p>
@@ -42,17 +42,17 @@ layout: default
 <h2>Социальные сети</h2>
 <div class="social-links">
     <a href="https://vk.com/chermenin" target="_blank" class="social-card">
-        <i data-lucide="message-square" class="contact-icon"></i>
+        <svg class="icon"><use xlink:href="#vk"></use></svg>
         <span>ВКонтакте</span>
     </a>
     
     <a href="https://ok.ru/aleksandr.chermenin" target="_blank" class="social-card">
-        <i data-lucide="users" class="contact-icon"></i>
+        <svg class="icon"><use xlink:href="#ok"></use></svg>
         <span>Одноклассники</span>
     </a>
     
     <a href="https://linkedin.com/in/chermenin" target="_blank" class="social-card">
-        <i data-lucide="briefcase" class="contact-icon"></i>
+        <svg class="icon"><use xlink:href="#linkedin"></use></svg>
         <span>LinkedIn</span>
     </a>
 </div>

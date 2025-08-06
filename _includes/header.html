@@ -1,7 +1,7 @@
 <header>
   <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
   <nav>
-    <a href="{{ '/' | relative_url }}" class="home-button"><i data-lucide="home"></i></a> · 
+    <a href="{{ '/' | relative_url }}" class="home-button"><svg class="icon"><use xlink:href="#home"></use></svg></a> · 
     <a href="{{ '/archive' | relative_url }}">Блог</a> · 
     <a href="{{ '/cv' | relative_url }}">Резюме</a> · 
     <a href="{{ '/contact' | relative_url }}">Контакты</a>
