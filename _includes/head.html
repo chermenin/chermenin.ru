@@ -5,7 +5,7 @@
 <head>
     <!-- Metadata. -->
     <meta name="keywords" content="{% for key in page.keywords %}{{ key }},{% endfor %}Александр,Черменин,Alex,Chermenin,ok,vk,wrike,epam,data,bigdata,данные,большие данные,блог,blog,программирование,programming,coding,java,personal,homepage,обработка данных,data processing,streaming,hadoop,spark,flink,apache,open source,oss" />
-    <meta name="description" content="{% if page.metadata %}{{ page.metadata }}{% else %}Блог о разработке, обработке данных и не только...{% endif %}" />
+    <meta name="description" content="{% if page.metadata %}{{ page.metadata }}{% else %}{% if page.description %}{{ page.description }}{% else %}Блог о разработке, обработке данных и не только...{% endif %}{% endif %}" />
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
