@@ -48,7 +48,7 @@ tags:
     	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     	lg = !"git lg1"
 
-Запуск `git lg1` или просто `git lg` выводит следущий результат:
+Запуск `git lg1` или просто `git lg` выводит следующий результат:
 
     * 048ae5b - (3 hours ago) Some style fixes - Aleksandr Chermenin (HEAD -> master, origin/master, origin/HEAD)
     *   badc12b - (4 hours ago) Merge branch 'master' of https://github.com/chermenin/chermenin.ru - Aleksandr Chermenin
