@@ -1,0 +1,107 @@
+---
+layout: default
+---
+{% assign best_lap = -1 %}
+{% assign total_laps = 0 %}
+{% assign total_time = 0 %}
+{% for race in page.races %}
+  {% assign total_laps = total_laps | plus:race.laps.size %}
+  {% for lap in race.laps %}
+    {% assign total_time = total_time | plus:lap %}
+    {% if lap < best_lap or best_lap < 0 %}
+      {% assign best_lap = lap %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign best_parts = best_lap | split: "." %}
+{% assign best_integer = best_parts[0] %}
+{% assign best_decimal = best_parts[1] | append: "000" | slice: 0, 3 %}
+{% assign avg_lap = total_time | divided_by:total_laps %}
+{% assign avg_parts = avg_lap | split: "." %}
+{% assign avg_integer = avg_parts[0] %}
+{% assign avg_decimal = avg_parts[1] | append: "000" | slice: 0, 3 %}
+<header>
+<p><strong>Трасса:</strong> {{ page.track }}</p>
+<p><strong>Карт:</strong> {{ page.kart }}</p>
+<p><strong>Лучший круг:</strong> {{ best_integer }}.{{ best_decimal }}</p>
+<p><strong>Средний круг:</strong> {{ avg_integer }}.{{ avg_decimal }}</p>
+</header>
+{% assign stripped_content = content | strip %}
+{% if stripped_content != empty and stripped_content != "" %}
+<div class="contact-title">
+    <svg class="icon"><use xlink:href="#notebook"></use></svg>
+    <span>Заметки</span>
+</div>
+{{ content }}
+{% endif %}
+
+<table class="race-table race-desktop">
+  <thead>
+    <tr>
+      <th>Круг</th>
+      {% assign max_laps_count = 0 %}
+      {% for race in page.races %}
+      {% if max_laps_count < race.laps.size %}{% assign max_laps_count = race.laps.size | minus: 1 %}{% endif %}
+      <th>Заезд {{ forloop.index }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+
+  {% assign min_values = "" | split: "," %}
+  {% for race in page.races %}
+    {% assign min = -1 %}
+    {% for i in (0..max_laps_count) %}
+      {% assign lap_time = race.laps[i] %}
+      {% if lap_time < min or min < 0 %}
+        {% assign min = lap_time %}
+      {% endif %}
+    {% endfor %}
+    {% assign min_values = min_values | push: min %}
+  {% endfor %}
+
+  <tbody>
+    {% for lap in (0..max_laps_count) %}
+    <tr>
+      <td>{{ forloop.index }}</td>
+      {% for race in page.races %}
+      <td{% if race.laps[lap] == min_values[forloop.index0] %} class="best-lap"{% endif %}>
+        {% if race.laps[lap] %}
+        {% assign parts = race.laps[lap] | split: "." %}
+        {% assign integer = parts[0] %}
+        {% assign decimal = parts[1] | append: "000" | slice: 0, 3 %}
+        {{ integer }}.{{ decimal }}
+        {% endif %}
+      </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}  </tbody>
+</table>
+
+{% for race in page.races %}
+<table class="race-table race-mobile">
+
+  {% assign race_index = forloop.index0 %}
+  <thead>
+    <tr>
+      <th>Круг</th>
+      <th>Заезд {{ forloop.index }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for lap in race.laps %}
+    <tr>
+      <td>{{ forloop.index }}</td>
+      <td{% if lap == min_values[race_index] %} class="best-lap"{% endif %}>
+        {% assign parts = lap | split: "." %}
+        {% assign integer = parts[0] %}
+        {% assign decimal = parts[1] | append: "000" | slice: 0, 3 %}
+        {{ integer }}.{{ decimal }}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endfor %}
+
+<a href="{{ "/races" | relative_url }}">← К списку заездов</a>

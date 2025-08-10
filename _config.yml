@@ -14,3 +14,14 @@ sass:
 
 include:
   - assets/fonts/
+
+collections:
+  races:
+    output: true
+    permalink: /races/:name/
+
+defaults:
+  - scope:
+      path: "_races"
+    values:
+      title: "Результаты заездов {date}"

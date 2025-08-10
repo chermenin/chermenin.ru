@@ -1,0 +1,91 @@
+.race-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  font-size: 0.95rem;
+}
+
+.race-table thead th {
+  background-color: $accent-color;
+  color: $background-color;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.race-table tbody td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.05);
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+.race-table tbody tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.02);
+}
+
+.race-table tbody tr:hover {
+  background-color: rgba(139, 69, 19, 0.05);
+}
+
+.race-table tbody td a {
+  color: $accent-color;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.race-table tbody td a:hover {
+  border-bottom-color: currentColor;
+}
+
+.best-lap {
+  font-weight: bold;
+  color: $accent-color;
+}
+
+.race-desktop {
+  display: table;
+}
+
+.race-mobile {
+  display: none;
+}
+
+@media (max-width: $mobile-breakpoint) {
+
+  .race-desktop {
+    display: none;
+  }
+
+  .race-mobile {
+    display: table;
+  }
+
+  .race-table tbody tr {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(139, 69, 19, 0.1);
+  }
+  
+  .race-table tbody td {
+    padding: 0.75rem 1rem;
+    position: relative;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.05);
+  }
+  
+  .race-table thead th {
+    background-color: $accent-color;
+    color: $background-color;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+}
