@@ -32,51 +32,46 @@ layout: default
     </table>
 </div>
 
-_Note:_ This application is free now! But you can [send me a cent](https://www.paypal.me/chermenin) if you want to support me. Thanks! :)
+_Note_: This application is **currently free**! If you'd like to support me, you can [send a small donation via PayPal](https://www.paypal.me/chermenin). Thanks! :)
 
-About
------
+## About
 
-*Battery Mark* is a great tool that allows you to evaluate overall status of power system in your laptop and test it in the most extreme conditions.
+**Battery Mark** is a powerful tool designed to evaluate your laptop’s power system and test its performance under extreme conditions.
 
-Main features:
-- execution of quick testing to show battery ability less than 10 minutes
-- full testing of laptop power system with displaying of a graph of discharge
-- the ability to run calculating process to make a full load of each processor core
-- simulation of a load on the disk subsystem, including reading and writing data
-- calculation of the final mark to compare laptops or batteries
-- making of a report for use or research later
-<br /><br />
+> **Key features:**
+> - **Quick testing** – Assess battery capacity in under 10 minutes.
+> - **Full system test** – Analyze the power system with a detailed discharge graph.
+> - **CPU stress test** – Fully load all processor cores for accurate performance measurement.
+> - **Report generation** – Save test results for future reference or analysis.
 
-Quick Test
-----------
+## Quick Test
 
-There going evaluation of laptop battery for the time required to drop 3-5% charge
-when you run a quick test. After that values will be extrapolated and maximum battery
-time will be calculated.
+The quick test evaluates your laptop’s battery by measuring the time it takes to lose 3–5% charge.
+The results are then extrapolated to estimate maximum battery life.
 
-**Warning!** Current battery level must be at least 10% to run a quick test.
-Test finishes automatically after receiving required number of data. By connecting
-the laptop to AC until testing is complete, test will be interrupted.
-<br /><br />
+> **⚠️ Requirements & Notes:**
+> - Battery level must be **at least 10%** to start the test.
+> - The test ends automatically once sufficient data is collected.
+> - Connecting the laptop to AC power during the test will interrupt it.
 
-Full Test
----------
+## Full Test
 
-Perform complete testing takes time, which is enough to drop the charge at least 50%.
-This data will not be extrapolated. It is recommended to run a full test when the
-level of charge is 90% or more, and not to interrupt until the laptop will be forced
-off. After that you need to connect your laptop to AC. There will appear the test
-results when the laptop will be switched on.
+The full test provides a comprehensive analysis by discharging the battery by at least 50%.
+Unlike the quick test, these results are not extrapolated—they reflect real-world performance.
 
-**Warning!** The current battery level must be at least 60% to run a full test.
-Test finishes automatically after the battery is fully discharged.
-<br /><br />
+> **✔️ For best results:**
+> - Start with a battery level of **90% or higher**.
+> - Do not interrupt the test until the laptop shuts down due to low battery.
+> - Reconnect to AC power afterward to view the results upon reboot.
 
-Results
--------
+> **⚠️ Requirements:**
+> - Battery level must be **at least 60%** to begin.
+> - The test ends automatically when the battery is fully discharged.
 
-After the test (quick and full) it will generate the report that contains some
-information about the laptop and the chart of discharge. There is a calculation of
-mark when performing a full test. The chart can be saved as an image file. The report
-can be saved in HTML file.
+## Results
+
+After completing either test, Battery Mark generates a detailed report containing:
+* Laptop specifications
+* Discharge graph (for full test, includes a performance score)
+* Option to **save the graph as an image**
+* Option to **export the report as an HTML file**
