@@ -32,7 +32,7 @@ layout: default
     </table>
 </div>
 
-_Note_: This application is **currently free**! If you'd like to support me, you can [send a small donation via PayPal](https://www.paypal.me/chermenin). Thanks! :)
+_Note_: This application is **currently free**! If you'd like to support me, you can [send&nbsp;a&nbsp;small&nbsp;donation via PayPal](https://www.paypal.me/chermenin). Thanks! :)
 
 ## About
 
