@@ -38,11 +38,11 @@ _Note_: This application is **currently free**! If you'd like to support me, you
 
 **Battery Mark** is a powerful tool designed to evaluate your laptop’s power system and test its performance under extreme conditions.
 
-> **Key features:**
-> - **Quick testing** – Assess battery capacity in under 10 minutes.
-> - **Full system test** – Analyze the power system with a detailed discharge graph.
-> - **CPU stress test** – Fully load all processor cores for accurate performance measurement.
-> - **Report generation** – Save test results for future reference or analysis.
+**Key features:**
+- **Quick testing** – Assess battery capacity in under 10 minutes.
+- **Full system test** – Analyze the power system with a detailed discharge graph.
+- **CPU stress test** – Fully load all processor cores for accurate performance measurement.
+- **Report generation** – Save test results for future reference or analysis.
 
 ## Quick Test
 
@@ -71,7 +71,7 @@ Unlike the quick test, these results are not extrapolated—they reflect real-wo
 ## Results
 
 After completing either test, Battery Mark generates a detailed report containing:
-* Laptop specifications
-* Discharge graph (for full test, includes a performance score)
-* Option to **save the graph as an image**
-* Option to **export the report as an HTML file**
+- Laptop specifications
+- Discharge graph (for full test, includes a performance score)
+- Option to **save the graph as an image**
+- Option to **export the report as an HTML file**
