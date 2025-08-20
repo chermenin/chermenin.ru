@@ -19,6 +19,10 @@
   padding-bottom: 1.0rem;
   border-bottom: 1px solid $border-color;
 }
+
+.post-preview:last-of-type {
+  border-bottom: none;
+}
     
 .all-posts {
   padding: 3rem;
